@@ -19,6 +19,8 @@ namespace CodingChallenges
         {
             // Here we will run our code
             ChallengeDay1();
+            ChallengeDay2();
+
         }
         // Here we will create our static methods
 
@@ -69,7 +71,26 @@ namespace CodingChallenges
         /// </summary>
         static void ChallengeDay2()
         {
-            // write solution here - Thursday
+            int[] arr = { 2, 4, 6, 2, 5 };
+            int i;
+            int j;
+
+
+            for (i = 0; i < arr.Length; i++)
+            {
+
+                int value = arr[i];
+
+                for (j = i + 2; j < arr.Length; j = j + 2)
+                {
+                    value = value + arr[j];
+
+                }
+
+                Console.WriteLine(value.ToString());
+
+            }
+            Console.ReadKey();
         }
 
 
